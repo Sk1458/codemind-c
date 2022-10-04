@@ -1,16 +1,14 @@
 #include<stdio.h>
 #include<math.h>
 
-int main()
+void prime(int n)
 {
-    int x,i,z,c=0;
-    scanf("%d",&x);
-    z=pow(x,0.5);
-    for(i=2;i<=z;i++)
+    int c=0,i;
+    for(i=2;i<=sqrt(n);i++)
     {
-        if(x%i==0)
+        if(n%i==0)
         {
-            c+=1;
+            c++;
         }
     }
     if(c>0)
@@ -21,6 +19,11 @@ int main()
     {
         printf("prime");
     }
-    
-    return 0;
+}
+
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    prime(n);
 }
