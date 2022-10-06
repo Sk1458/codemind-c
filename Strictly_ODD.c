@@ -1,5 +1,4 @@
 #include<stdio.h>
-
 int main()
 {
     int n,c=0;
@@ -17,5 +16,4 @@ int main()
     printf("True");
     else
     printf("False");
-    return 0;
 }
