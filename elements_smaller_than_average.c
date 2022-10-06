@@ -2,24 +2,19 @@
 
 int main()
 {
-    int size,c=0,avg,s=0,i;
-    scanf("%d",&size);
-    int a[size];
-    for(i=0;i<size;i++)
+    int n,sum=0,c=0;
+    scanf("%d",&n);
+    int arr[n];
+    for(int i=0;i<n;i++)
     {
-        scanf("%d",&a[i]);
+        scanf("%d",&arr[i]);
+        sum+=arr[i];
     }
-    for(i=0;i<size;i++)
+    int avg=sum/n;
+    for(int i=0;i<n;i++)
     {
-        s+=a[i];
-    }
-    avg=s/size;
-    for(i=0;i<size;i++)
-    {
-        if(a[i]<=avg)
-        {
-            c++;
-        }
+        if(arr[i]<=avg)
+        c++;
     }
     printf("%d",c);
     return 0;
