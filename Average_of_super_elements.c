@@ -30,8 +30,7 @@ int main()
     {
         printf("-1");
     }
-    else
-    {
+    else{
         float x=(sum*1.0)/(count*1.0);
         printf("%.2f",x);
     }
