@@ -1,40 +1,22 @@
-#include<stdio.h>
+#include<iostream>
+using namespace std;
 
-int sumdig(int n)
-{
-    int res=0;
-    while(n>0)
-    {
-        res+=n%10;
-        n=n/10;
+int spy_number(int num){
+    int temp,sum=0,prod=1;
+    temp=num;
+    while(num!=0){
+        sum+=num%10;
+        prod*=num%10;
+        num=num/10;
     }
-    return res;
+    if(sum==prod) return 1;
+    else return 0;
 }
 
-int prodig(int n)
-{
-    int r=1;
-    while(n>0)
-    {
-        r*=n%10;
-        n=n/10;
-    }
-    return r;
-}
-
-int main()
-{
-    int k,ks,kp;
-    scanf("%d",&k);
-    ks=sumdig(k);
-    kp=prodig(k);
-    if(ks==kp)
-    {
-        printf("Spy Number");
-    }
-    else
-    {
-        printf("Not Spy Number");
-    }
+int main(){
+    int num;
+    cin>>num;
+    if(spy_number(num)) cout<<"Spy Number";
+    else cout<<"Not Spy Number";
     return 0;
 }
